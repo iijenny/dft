@@ -4,7 +4,7 @@ import pandas as pd
 import cmath
 
 # Import the data:
-data = pd.read_excel("C:\Projekty\l64_2007.xlsx")
+data = pd.read_excel("dft/data.xlsx")
 data.columns = ["Date", "Number"]
 
 # Change column type & sum by date:
@@ -25,6 +25,6 @@ def DFT(x):
     return receive_data
 
 output = str(DFT(group_data.Number))
-file = open("result.txt","w")
+file = open("dft/result.txt","w+")
 file.writelines(output)
 file.close()
